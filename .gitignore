@@ -1,0 +1,39 @@
+# Common Java ignores
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Build directories
+target/
+build/
+out/
+bin/
+
+# Dependency directories
+.gradle/
+.mvn/
+.m2/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+*.env
