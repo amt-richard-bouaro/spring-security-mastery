@@ -11,6 +11,7 @@
 *.rar
 
 # Build directories
+**target/
 target/
 build/
 out/
@@ -18,12 +19,12 @@ bin/
 
 # Dependency directories
 .gradle/
-.mvn/
+**.mvn/
 .m2/
 
 # IDE files
-.idea/
-*.iml
+**.idea/
+**.iml
 *.ipr
 *.iws
 .vscode/
