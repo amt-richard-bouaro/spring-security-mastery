@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: 03-custom-authentication
+
+app:
+  api-key: ${API_KEY}
+
+server:
+  port: 10010
