@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 04-multi-authentication-filter
+  config:
+    import: optional:file:.env[.properties]
+
+app:
+  api-key: ${API_KEY}
+
+server:
+  port: 10010
