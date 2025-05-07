@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Consent</title>
+</head>
+<body>
+<h2>Authorize Application</h2>
+<p>Application <strong>${client.clientName}</strong> requests access to the following scopes:</p>
+<!--<ul>-->
+<!--    <#list scopes as scope>-->
+<!--    <li>${scope}</li>-->
+<!--    </#list>-->
+<!--</ul>-->
+<form method="post" action="/oauth2/consent">
+    <input type="hidden" name="clientId" value="${client.clientId}">
+    <input type="hidden" name="state" value="${state}">
+    <button type="submit" name="approve" value="true">Approve</button>
+    <button type="submit" name="approve" value="false">Deny</button>
+</form>
+</body>
+</html>
