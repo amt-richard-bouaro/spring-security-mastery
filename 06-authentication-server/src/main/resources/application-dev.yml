@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: 06-authentication-server
+  datasource:
+    url: jdbc:postgresql://localhost:5422/oauth2_postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://localhost:10010
+  config:
+    import: optional:file:.env
+
+server:
+  port: 10010
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG

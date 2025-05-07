@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 06-authentication-server
+  profiles:
+    active: dev
