@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 07-resource-server
+  config:
+    import: optional:file.env
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:default}

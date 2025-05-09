@@ -1,0 +1,38 @@
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+  tomcat:
+      connection-timeout: 10s
+      remoteip:
+          remote-ip-header: x-forwarded-for
+          protocol-header: x-forwarded-proto
+      threads:
+          max: 200
+          min-spare: 10
+      keep-alive-timeout: 30s
+      accept-count: 100
+
+#  ssl:
+#    enabled: true
+#    key-store: classpath:keystore.p12
+#    key-store-password: ${KEY_STORE_PASSWORD}
+#    key-store-type: PKCS12
+
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: http://localhost:10010/oauth2/jwks
+#          issuer-uri: http://localhost:10010
+#          jws-algorithms: RS256
+
+jwt:
+  jwk-set-uri: http://localhost:10010/oauth2/jwks
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: debug
+    com.rbouaro.resourceserver: INFO
